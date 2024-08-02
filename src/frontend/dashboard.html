@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <a href="index.html" class="home-button">
+                <img src="Images/Index_background.PNG" alt="Home">
+            </a>
+            <div class="navbar-content">
+                <h1>Dashboard</h1>
+                <ul>
+                    <li><a href="#" onclick="showView('weekly')">Weekly Analysis</a></li>
+                    <li><a href="#" onclick="showView('long-term')">Long-term Analysis</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="views">
+            <div id="weekly" class="view">
+                <h2>Weekly Analysis</h2>
+                <div class="chart">
+                    <!-- Weekly activity, weight, and calorie charts go here -->
+                </div>
+            </div>
+            <div id="long-term" class="view" style="display: none;">
+                <h2>Long-term Analysis</h2>
+                <div class="chart">
+                    <!-- Long-term activity, weight, and calorie charts go here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+
+
+
+

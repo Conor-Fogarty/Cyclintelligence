@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dashboard Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<h1>Welcome to My Web Application</h1>
-</header>
-<p>This is a simple test HTML file to get
-you started with your project.</p>
-<button id="testButton">Click Me</button>
+    <div class="container">
+        <img src="Images/Index_background.PNG" alt="Background Image" class="background-image">
+
+        <div class="forms">
+            <div class="form-container">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+                <p class="error" id="login-error"></p>
+            </div>
+
+            <div class="form-container">
+                <h2>Signup</h2>
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button onclick="signup()">Signup</button>
+                <p class="error" id="signup-error"></p>
+            </div>
+        </div>
+    </div>
+    <script src="login-sign_in.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

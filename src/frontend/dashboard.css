@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #f46611;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-button {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.home-button img {
+    height: 60px; /* Adjust the height as needed */
+    width: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-content {
+    text-align: center;
+    flex: 1;
+    color: black;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.views {
+    display: flex;
+    flex: 1;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.view {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+    color: #f46611;
+}
+
+.chart {
+    margin-top: 20px;
+    /* Add styles for chart containers */
+}
+
+
+
+

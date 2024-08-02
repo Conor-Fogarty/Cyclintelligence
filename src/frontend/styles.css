@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f46611;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+h2{
+    font-size: 75px;
+    color: White;
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures the image behaves as a block element */
+    padding: 20px;
+}
+h3{
+    font-size: 30px;
+    color: white;
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures the image behaves as a block element */
+    padding: 10px;
+}
+
+.background-image {
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the specified dimensions */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures the image behaves as a block element */
+    margin-bottom: 20px;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.form-container {
+    background-color: black;
+    color: #f46611;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+

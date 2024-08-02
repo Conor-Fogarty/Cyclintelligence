@@ -1,5 +1,5 @@
 **Clone the Repository:**
 ```sh
-git clone <repository-url>
-cd my-web-application
+git clone <https://github.com/Conor-Fogarty/DashboardWebsitel>
+cd DashboardWebsite
 ```
