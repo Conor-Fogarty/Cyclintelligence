@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <nav class="navbar">
+            <a href="index.html" class="home-button">
+                <img src="Images/Index_background.PNG" alt="Home">
+            </a>
+            <div class="navbar-content">
+                <h1>Profile</h1>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="profile-form">
+            <h2>Set Your Goals</h2>
+            <form id="goals-form">
+                <div class="form-group">
+                    <label for="weekly-mileage">Average Weekly Mileage (mi):</label>
+                    <input type="number" id="weekly-mileage" placeholder="Enter mileage" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthly-mileage">Average Monthly Mileage (mi):</label>
+                    <input type="number" id="monthly-mileage" placeholder="Enter mileage" required>
+                </div>
+                <div class="form-group">
+                    <label for="daily-calories">Daily Calorie Intake (kcal):</label>
+                    <input type="number" id="daily-calories" placeholder="Enter calories" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="number" id="weight" placeholder="Enter weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="weekly-exercise">Average Weekly Exercise Time:</label>
+                    <input type="text" id="weekly-exercise" placeholder="e.g., 2h 30m" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthly-exercise">Average Monthly Exercise Time:</label>
+                    <input type="text" id="monthly-exercise" placeholder="e.g., 10h 00m" required>
+                </div>
+                <button type="submit">Save Goals</button>
+            </form>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

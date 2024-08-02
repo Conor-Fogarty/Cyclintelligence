@@ -19,18 +19,63 @@
                     <li><a href="#" onclick="showView('long-term')">Long-term Analysis</a></li>
                 </ul>
             </div>
+            <a href="profile.html" class="profile-button">Profile</a>
         </nav>
         <div class="views">
             <div id="weekly" class="view">
                 <h2>Weekly Analysis</h2>
-                <div class="chart">
-                    <!-- Weekly activity, weight, and calorie charts go here -->
+                <div class="weekly-summary">
+                    <h3>Activities for Jul 29, 2024 - Aug 4, 2024</h3>
+                    <div class="summary-details">
+                        <div class="detail">
+                            <span class="label">Weekly Mileage:</span>
+                            <span id="weekly-mileage" class="value">-- mi</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Average Weekly Mileage:</span>
+                            <span id="average-weekly-mileage" class="value">-- mi</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Weight Loss Remaining:</span>
+                            <span id="weight-loss-remaining" class="value">-- lbs</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Time Spent:</span>
+                            <span id="weekly-time" class="value">-- h -- m</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Average Weekly Exercise Time:</span>
+                            <span id="average-weekly-exercise-time" class="value">-- h -- m</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="long-term" class="view" style="display: none;">
                 <h2>Long-term Analysis</h2>
-                <div class="chart">
-                    <!-- Long-term activity, weight, and calorie charts go here -->
+                <div class="long-term-summary">
+                    <h3>Monthly Overview</h3>
+                    <div class="summary-details">
+                        <div class="detail">
+                            <span class="label">Monthly Mileage:</span>
+                            <span id="monthly-mileage" class="value">-- mi</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Average Monthly Mileage:</span>
+                            <span id="average-monthly-mileage" class="value">-- mi</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Weight Loss Remaining:</span>
+                            <span id="long-term-weight-loss-remaining" class="value">-- lbs</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Time Spent:</span>
+                            <span id="monthly-time" class="value">-- h -- m</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Average Monthly Exercise Time:</span>
+                            <span id="average-monthly-exercise-time" class="value">-- h -- m</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,6 +83,9 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
+
+
 
 
 

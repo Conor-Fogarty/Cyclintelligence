@@ -15,6 +15,7 @@ body {
     background-color: #f46611;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .home-button {
@@ -23,7 +24,7 @@ body {
 }
 
 .home-button img {
-    height: 60px; /* Adjust the height as needed */
+    height: 40px; /* Adjust the height as needed */
     width: auto;
     border: none;
     cursor: pointer;
@@ -32,11 +33,11 @@ body {
 .navbar-content {
     text-align: center;
     flex: 1;
-    color: black;
 }
 
 .navbar h1 {
     margin: 0;
+    color: white;
 }
 
 .navbar ul {
@@ -53,8 +54,25 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
+}
+
+.profile-button {
+    position: absolute;
+    right: 20px; /* Position the button to the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.profile-button:hover {
+    background-color: #45a049;
 }
 
 .views {
@@ -71,10 +89,36 @@ body {
     color: #f46611;
 }
 
-.chart {
-    margin-top: 20px;
-    /* Add styles for chart containers */
+.weekly-summary,
+.long-term-summary {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.weekly-summary h3,
+.long-term-summary h3 {
+    margin-top: 0;
+}
+
+.summary-details {
+    margin-top: 10px;
+}
+
+.detail {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    margin-left: 10px;
+}
+
 
 
 
