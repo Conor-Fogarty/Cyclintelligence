@@ -67,13 +67,11 @@ HTTP Status Code: 200 OK
 {
   "message": "Login successful!"
 }
-
 Error:
 HTTP Status Code: 400 Bad Request
 {
   "error": "Invalid username or password."
 }
-
 Example:
 Request:
 bash curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"username": "CS325", "password": "password123"}'
@@ -81,6 +79,45 @@ Response:
 {
   "message": "Login successful!"
 }
+
+Get User Goals
+Endpoint: /goals/:username
+HTTP Method: GET
+Description: Retrieves the goals for the specified user.
+Parameters:
+username (string, required): The username of the account to retrieve goals for.
+Request Body: None
+Response Body:
+Success:
+HTTP Status Code: 200 OK
+{
+  "weeklyMileage": "string",
+  "monthlyMileage": "string",
+  "dailyCalories": "string",
+  "weight": "string",
+  "weeklyExercise": "string",
+  "monthlyExercise": "string"
+}
+Error:
+HTTP Status Code: 404 Not Found
+{
+  "error": "User not found."
+}
+Example:
+Request:
+bash curl -X GET http://localhost:3000/goals/CS325
+Response:
+{
+  "weeklyMileage": "30",
+  "monthlyMileage": "120",
+  "dailyCalories": "2000",
+  "weight": "150",
+  "weeklyExercise": "3h",
+  "monthlyExercise": "12h"
+}
+
+
+
 
 
 
