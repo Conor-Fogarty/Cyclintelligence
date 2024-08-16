@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.getElementById('goals-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const username = sessionStorage.getItem('username');
 
     if (!username) {
@@ -52,4 +52,33 @@ document.getElementById('goals-form').addEventListener('submit', async (e) => {
         alert('An error occurred. Please try again.');
     }
 });
+async function deleteUserAccount() {
+    const username = sessionStorage.getItem('username');
+
+    if (!username) {
+        alert('Username not found. Please log in again.');
+        window.location.href = 'index.html';
+        return;
+    }
+
+    const confirmation = confirm('Are you sure you want to delete your account? This action cannot be undone.');
+    if (!confirmation) return;
+
+    try {
+        const response = await fetch(`/users/${username}`, {
+            method: 'DELETE',
+        });
+
+        if (response.status === 200) {
+            alert('Your account has been deleted.');
+            sessionStorage.clear();
+            window.location.href = 'index.html';
+        } else {
+            alert('Failed to delete your account.');
+        }
+    } catch (err) {
+        console.error('Failed to delete user account:', err);
+        alert('An error occurred. Please try again.');
+    }
+}
 

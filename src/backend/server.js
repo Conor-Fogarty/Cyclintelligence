@@ -62,6 +62,19 @@ app.put('/goals/:username', async (req, res) => {
     }
 });
 
+// API route to handle deleting a user account
+app.delete('/users/:username', async (req, res) => {
+    const { username } = req.params;
+    try {
+        const user = await db.get(username);
+        await db.remove(user);
+        return res.status(200).json({ message: 'User account deleted successfully.' });
+    } catch (err) {
+        console.error('Error deleting user account:', err);
+        return res.status(500).json({ error: 'Failed to delete user account.' });
+    }
+});
+
 // Serve static files for the front-end
 app.use(express.static('../frontend'));
 
