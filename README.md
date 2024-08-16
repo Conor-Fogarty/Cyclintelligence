@@ -117,6 +117,73 @@ Response:
 }
 
 
+Update User Goals
+Endpoint: /goals/:username
+HTTP Method: PUT
+Description: Updates the goals for the specified user.
+Parameters:
+username (string, required): The username of the account to update goals for.
+Request Body:
+{
+  "weeklyMileage": "string",   // Optional, the new weekly mileage goal
+  "monthlyMileage": "string",  // Optional, the new monthly mileage goal
+  "dailyCalories": "string",   // Optional, the new daily calorie goal
+  "weight": "string",          // Optional, the new weight goal
+  "weeklyExercise": "string",  // Optional, the new weekly exercise time goal
+  "monthlyExercise": "string"  // Optional, the new monthly exercise time goal
+}
+Response Body:
+Success:
+HTTP Status Code: 200 OK
+{
+  "message": "Goals updated successfully!"
+}
+Error:
+HTTP Status Code: 500 Internal Server Error
+{
+  "error": "Failed to update goals."
+}
+Example:
+Request:
+bash
+curl -X PUT http://localhost:3000/goals/CS325 -H "Content-Type: application/json" -d '{"weeklyMileage": "35", "weight": "145"}'
+Response:
+{
+  "message": "Goals updated successfully!"
+}
+
+
+5. Delete User Account
+Endpoint: /users/:username
+HTTP Method: DELETE
+Description: Deletes the specified user account.
+Parameters:
+username (string, required): The username of the account to delete.
+Request Body: None
+Response Body:
+Success:
+HTTP Status Code: 200 OK
+{
+  "message": "User account deleted successfully."
+}
+Error:
+HTTP Status Code: 404 Not Found
+{
+  "error": "User not found."
+}
+Error:
+HTTP Status Code: 500 Internal Server Error
+{
+  "error": "Failed to delete user account."
+}
+Example:
+Request:
+bash
+curl -X DELETE http://localhost:3000/users/CS325
+Response:
+{
+  "message": "User account deleted successfully."
+}
 
 
 
