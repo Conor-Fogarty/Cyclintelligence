@@ -1,20 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Load saved goals from local storage
-    const goals = JSON.parse(localStorage.getItem('userGoals')) || {};
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch(`/goals/${sessionStorage.getItem('username')}`);
+        const goals = await response.json();
 
-    // Populate the form with saved goals
-    document.getElementById('weekly-mileage').value = goals.weeklyMileage || '';
-    document.getElementById('monthly-mileage').value = goals.monthlyMileage || '';
-    document.getElementById('daily-calories').value = goals.dailyCalories || '';
-    document.getElementById('weight').value = goals.weight || '';
-    document.getElementById('weekly-exercise').value = goals.weeklyExercise || '';
-    document.getElementById('monthly-exercise').value = goals.monthlyExercise || '';
+        document.getElementById('weekly-mileage').value = goals.weeklyMileage || '';
+        document.getElementById('monthly-mileage').value = goals.monthlyMileage || '';
+        document.getElementById('daily-calories').value = goals.dailyCalories || '';
+        document.getElementById('weight').value = goals.weight || '';
+        document.getElementById('weekly-exercise').value = goals.weeklyExercise || '';
+        document.getElementById('monthly-exercise').value = goals.monthlyExercise || '';
+    } catch (err) {
+        console.error('Failed to load goals:', err);
+    }
 });
 
-document.getElementById('goals-form').addEventListener('submit', (e) => {
+document.getElementById('goals-form').addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const username = sessionStorage.getItem('username');
 
-    // Collect form data
+    if (!username) {
+        alert('Username not found. Please log in again.');
+        window.location.href = 'index.html';
+        return;
+    }
     const goals = {
         weeklyMileage: document.getElementById('weekly-mileage').value,
         monthlyMileage: document.getElementById('monthly-mileage').value,
@@ -24,8 +33,23 @@ document.getElementById('goals-form').addEventListener('submit', (e) => {
         monthlyExercise: document.getElementById('monthly-exercise').value
     };
 
-    // Save goals to local storage
-    localStorage.setItem('userGoals', JSON.stringify(goals));
+    try {
+        const response = await fetch(`/goals/${sessionStorage.getItem('username')}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(goals),
+        });
 
-    alert('Goals saved successfully!');
+        if (response.status === 200) {
+            alert('Goals saved successfully!');
+        } else {
+            alert('Failed to save goals.');
+        }
+    } catch (err) {
+        console.error('Failed to save goals:', err);
+        alert('An error occurred. Please try again.');
+    }
 });
+
