@@ -5,6 +5,7 @@ cd DashboardWebsite
 ```
 Hello!
 How to start this application:
+First Clone the server above 
 For demonstration purposes my current iteration if this program is hosted at this file locaiton: C:\Users\Conor Fogarty\Documents\GitHub\CS326\DashboardWebsite\src
 
 To start Express PouchDb and Http Server, following the download of this program open your CMD and enter these commands in this order:
