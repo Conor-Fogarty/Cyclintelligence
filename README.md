@@ -50,3 +50,45 @@ Response
 {
 	“message” : “Signup successful!”
 }
+
+User Login
+Endpoint: /login
+HTTP Method: POST
+Description: Authenticates a user by verifying the username and password.
+Parameters: None
+Request Body:
+{
+  "username": "string",   // Required, the username of the account
+  "password": "string"    // Required, the password of the account
+}
+Response Body:
+Success:
+HTTP Status Code: 200 OK
+{
+  "message": "Login successful!"
+}
+
+Error:
+HTTP Status Code: 400 Bad Request
+{
+  "error": "Invalid username or password."
+}
+
+Example:
+Request:
+bash curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"username": "CS325", "password": "password123"}'
+Response:
+{
+  "message": "Login successful!"
+}
+
+
+
+
+
+
+
+
+
+
+
