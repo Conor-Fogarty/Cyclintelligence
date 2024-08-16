@@ -153,7 +153,7 @@ Response:
 }
 
 
-5. Delete User Account
+Delete User Account
 Endpoint: /users/:username
 HTTP Method: DELETE
 Description: Deletes the specified user account.
