@@ -1,15 +1,16 @@
 **Clone the Repository:**
 ```sh
-git clone <https://github.com/Conor-Fogarty/DashboardWebsite>
+git clone https://github.com/Conor-Fogarty/DashboardWebsite
 cd DashboardWebsite
 ```
 Hello!
+
 How to start this application:
 First Clone the server above 
 For demonstration purposes my current iteration if this program is hosted at this file locaiton: C:\Users\Conor Fogarty\Documents\GitHub\CS326\DashboardWebsite\src
 
 To start Express PouchDb and Http Server, following the download of this program open your CMD and enter these commands in this order:
- 
+ WARNING: YOU MUST DELETE THE USER FOLDER IF IT APPEARS BEFORE ATTEMPTING TO SIGN-UP
 cd C:\Users\Conor Fogarty\Documents\GitHub\CS326\DashboardWebsite\src\backend
 (replace everything after cd with your exact file locaiton)
 npm install
@@ -35,7 +36,7 @@ Success (HTTP 201)
 “message” : “Signup successfully!”
 }
 Error (HTTP 404)
-}
+{
 “error” : “Username already exists”
 }
 Error (HTTP 500)
