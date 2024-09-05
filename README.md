@@ -1,6 +1,6 @@
 **Clone the Repository:**
 ```sh
-git clone https://github.com/Conor-Fogarty/DashboardWebsite
+git clone https://github.com/Conor-Fogarty/Cyclintelligence
 cd DashboardWebsite
 ```
 Hello!
